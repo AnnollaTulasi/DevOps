@@ -1,0 +1,47 @@
+#String
+name: tulasi
+age: "23"
+job: 'swe'
+
+bio: | 
+this is tulasi
+all the lines added here represent as it is
+
+mesage: >
+all the 
+stuf added here
+is added in single line
+it apperas in differently but added to single line
+
+number : 123
+marks: 9.13
+booleanValue: Yes #we will have yes ,no in booleans
+# bolean accepted values --Y,Yes,y,yes,YES,TRUE,true
+
+#Types
+zero : !!int 0
+positiveNum : !!int 56
+negativeNum : !!int 65
+octal: !!int 0657
+hexadecimal: !!int 0x123
+binary: !!int 0b11001
+commaValue: !!int 54_000 #54,000
+
+#Float
+marks: !!float 98.19
+infinity: !!float .inf
+not a num: .nan
+
+#Boolean
+girl: !!bool No
+name: !!str tulasi
+
+#Null
+middleName: !!null Null #NULL,null,~
+~: this is a null key
+
+#date
+date: !!timestamp 21-11-2024
+
+#exponents
+exponent: 34E5

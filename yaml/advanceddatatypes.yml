@@ -1,0 +1,61 @@
+#Lists
+student: !!seq
+- name
+- age
+- marks
+- roll_no
+
+student: !!seq [name,age,roll_no]
+
+##sparse seq-->will have some keys as empty
+hobbies:
+-
+- playing
+- crying
+
+#map within a map
+name : !!map tulasi
+age:
+ job: sde
+ hobbies: playing
+
+ # pairs-same key has different values
+ pairExample :
+  - job: !!pairs sde
+  - job: !!pairs student
+
+ pairExample: !!pairs [job: sde,job : student]
+
+ #pairs are array of hashtables
+
+ #set will allow us to have unique values
+ names: !!set
+ ? tulasi
+ ? laxmi
+
+
+ #dictionary -omap
+
+ people: !!omap
+  - Tulasi: 
+     name: Tulasi Annolla
+     age: 23
+  - Dharma:
+     name: Dharma Teja
+     age: 21
+
+#reusing some properties using anchors
+likings: &linkes
+   fav fruit: mango
+   dislikes: oranges
+
+person1:
+   name: tulasi
+   <<: *likes
+person2:
+   name: laxmi
+   <<: *likes
+   dislikes: grapes
+
+
+
